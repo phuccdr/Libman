@@ -1,0 +1,17 @@
+com\libman\model\LibraryCard.class
+com\libman\model\Invoice.class
+com\mycompany\libman\resources\JakartaEE10Resource.class
+com\libman\model\Member.class
+com\libman\dao\InvoiceDAO.class
+com\libman\dao\MemberDAO.class
+com\libman\model\Reader.class
+com\libman\dao\DAO.class
+com\libman\utils\DBConnection.class
+com\libman\dao\LibraryCardDAO.class
+com\mycompany\libman\JakartaRestConfiguration.class
+com\libman\dao\SupplierStatisticsDAO.class
+com\libman\model\ImportDocument.class
+com\libman\model\SupplierStatistics.class
+com\libman\model\Manager.class
+com\libman\model\Document.class
+com\libman\model\Supplier.class
