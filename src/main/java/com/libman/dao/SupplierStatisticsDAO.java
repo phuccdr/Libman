@@ -20,8 +20,7 @@ public class SupplierStatisticsDAO extends DAO {
         List<SupplierStatistics> statisticsList = new ArrayList<>();
         
         String sql = "SELECT s.id, s.name, " +
-                     "SUM(id.quantity) as total_quantity, " +
-                     "SUM(id.quantity * id.price) as total_amount " +
+                     "SUM(id.quantity) as total_quantity " +
                      "FROM tblSupplier s " +
                      "INNER JOIN tblImportDocument id ON s.id = id.tblSupplierid " +
                      "INNER JOIN tblInvoice i ON id.tblInvoiceid = i.id " +
@@ -41,8 +40,6 @@ public class SupplierStatisticsDAO extends DAO {
                 stats.setSupplierId(rs.getInt("id"));
                 stats.setSupplierName(rs.getString("name"));
                 stats.setQuantity(rs.getInt("total_quantity"));
-                stats.setTotalAmount(rs.getInt("total_amount"));
-                
                 statisticsList.add(stats);
             }
         } catch (SQLException e) {
@@ -52,6 +49,8 @@ public class SupplierStatisticsDAO extends DAO {
         return statisticsList;
     }
 }
+
+
 
 
 

@@ -145,9 +145,9 @@
                             <thead>
                                 <tr>
                                     <th>STT</th>
+                                    <th>Mã NCC</th>
                                     <th>Nhà cung cấp</th>
                                     <th style="text-align: right;">Số lượng nhập</th>
-                                    <th style="text-align: right;">Tổng giá trị</th>
                                     <th style="text-align: center;">Thao tác</th>
                                 </tr>
                             </thead>
@@ -159,14 +159,11 @@
                                     <tr onclick="viewSupplierImport(<%= stat.getSupplierId() %>)" 
                                         style="cursor: pointer;">
                                         <td><%= index++ %></td>
+                                        <td><span style="color: #666;">#<%= stat.getSupplierId() %></span></td>
                                         <td><strong><%= stat.getSupplierName() %></strong></td>
                                         <td style="text-align: right;">
                                             <%= df.format(stat.getQuantity()) %> 
                                             <span style="color: #666;">sản phẩm</span>
-                                        </td>
-                                        <td style="text-align: right;">
-                                            <%= df.format(stat.getTotalAmount()) %> 
-                                            <span style="color: #666;">VNĐ</span>
                                         </td>
                                         <td style="text-align: center;">
                                             <a href="SupplierImportScreen.jsp?supplierId=<%= stat.getSupplierId() %>" 
